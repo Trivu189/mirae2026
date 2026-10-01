@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hành trình Thâm Quyến – Quảng Châu · Mirae Asset</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F7;--card:#fff;--tx:#152436;--mu:#5A6B7D;--ln:#D3DAE1;--or:#F26522;--jd:#1F7A68;--ink:#0B2038;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1724;--card:#11243A;--tx:#E6EDF4;--mu:#9DB0C2;--ln:#24435F;--ink:#061320}}
+:root[data-theme="dark"]{--bg:#0A1724;--card:#11243A;--tx:#E6EDF4;--mu:#9DB0C2;--ln:#24435F;--ink:#061320}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.hero{background:var(--ink);color:#EAF1F8;padding:30px 20px 22px;border-bottom:4px solid var(--or)}
+.wrap{max-width:760px;margin:0 auto}
+.hero small{color:#9FC0DC;font-size:12.5px}
+.hero h1{font-size:clamp(24px,6vw,36px);margin:6px 0 4px;font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.hero p{margin:0;color:#9FC0DC;font-size:14px}
+.status{margin-top:16px;padding:12px 14px;border:1px solid rgba(255,255,255,.18);border-radius:3px;font-size:15px;line-height:1.5}
+.status b{color:#FFB98C}
+.live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7a8a99;margin-right:6px}
+.live.on{background:#3DDC97}
+.bar{height:6px;background:rgba(255,255,255,.15);margin-top:12px;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--or);width:0;transition:width .4s}
+main{padding:18px 16px 60px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:4px;padding:14px 16px}
+h2{font-size:15px;margin:26px 0 10px;font-weight:700}
+h2 span{color:var(--or)}
+h2 em{font-style:normal;color:var(--mu);font-weight:500;font-size:13px;margin-left:6px}
+.stop{position:relative;padding:0 0 14px 28px;border-left:2px solid var(--ln);margin-left:7px}
+.stop::before{content:"";position:absolute;left:-8px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--ln)}
+.stop.done{border-left-color:var(--jd)}
+.stop.done::before{background:var(--jd);border-color:var(--jd)}
+.stop.cur::before{background:var(--or);border-color:var(--or);box-shadow:0 0 0 5px rgba(242,101,34,.25)}
+.stop .t{font-size:12px;color:var(--or);font-weight:700}
+.stop .n{font-weight:600;font-size:15px;line-height:1.4}
+.stop .s{font-size:13px;color:var(--mu)}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;background:var(--or);color:#fff;padding:2px 8px;border-radius:2px;margin-left:6px}
+button,select,input,textarea{font:inherit;color:inherit}
+.btn{background:var(--ink);color:#fff;border:0;border-radius:2px;padding:9px 14px;font-weight:600;font-size:14px;cursor:pointer}
+.btn.or{background:var(--or)}
+.btn.sm{padding:4px 9px;font-size:12px;background:transparent;color:var(--mu);border:1px solid var(--ln);margin-top:6px}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible,.th:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+.f{display:grid;gap:10px}
+.f select,.f input[type=text],.f textarea{width:100%;padding:9px 10px;background:var(--bg);border:1px solid var(--ln);border-radius:2px}
+.f textarea{min-height:76px;resize:vertical}
+.post{margin-top:8px;padding:10px 12px;background:var(--card);border:1px solid var(--ln);border-radius:3px}
+.post p{margin:6px 0 0;font-size:14px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.post .m{font-size:12px;color:var(--mu)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:6px}
+.th{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px;cursor:zoom-in;display:block;background:var(--ln)}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:99;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;border-radius:3px}
+.hint{font-size:13px;color:var(--mu);line-height:1.55}
+@media print{.hero{border:0}.no-print,.btn{display:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <small>Mirae Asset Securities Vietnam · 05–09/11/2026</small>
+  <h1>Tương lai đang diễn ra</h1>
+  <p>Hành trình Thâm Quyến – Quảng Châu · Đi để thấy. Về để làm.</p>
+  <div class="status"><span class="live" id="live"></span><span id="st">Đang tải...</span>
+    <div class="bar"><i id="bar"></i></div></div>
+</div></header>
+
+<main><div class="wrap">
+  <section class="card no-print" id="comp" hidden>
+    <b>Chia sẻ khoảnh khắc</b>
+    <div class="f" style="margin-top:10px">
+      <select id="sel" aria-label="Điểm dừng"></select>
+      <input type="text" id="nm" placeholder="Tên của bạn" maxlength="40">
+      <textarea id="tx" placeholder="Vài dòng ghi chú..." maxlength="600"></textarea>
+      <input type="file" id="fl" accept="image/*" multiple>
+      <div><button class="btn or" id="go">Đăng lên nhật ký</button> <span class="hint" id="msg"></span></div>
+    </div>
+  </section>
+  <p class="hint no-print" id="ro" hidden>Bạn đang ở chế độ xem. Trang tự cập nhật khi đoàn đăng ảnh và ghi chú mới.</p>
+  <div id="tl"></div>
+  <p class="hint no-print" style="margin-top:20px">Trang được lưu lại sau chuyến đi để làm kỷ niệm. <button class="btn sm" id="pr">In / lưu PDF</button></p>
+</div></main>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+var DAYS=[["Ngày 1","Thứ Năm 05/11","Cất cánh"],["Ngày 2","Thứ Sáu 06/11","Thấy tương lai"],["Ngày 3","Thứ Bảy 07/11","Chuyển nhịp"],["Ngày 4","Chủ Nhật 08/11","Chạm vào niềm tin và di sản"],["Ngày 5","Thứ Hai 09/11","Mang về"]];
+var STOPS=[
+[0,"11:30","Tập trung tại sân bay Tân Sơn Nhất","Làm thủ tục lên đường"],
+[0,"14:30","Cất cánh, chuyến CZ8466","Bay thẳng đến Thâm Quyến"],
+[0,"17:55","Đến Thâm Quyến","Nhập cảnh, ăn tối, dạo đêm"],
+[1,"","Happy Harbor","Khu phức hợp ven biển"],
+[1,"","Chung Thư Các","Không gian sách độc đáo"],
+[1,"","Bảo tàng Khoa học và Công nghệ","Thành tựu đổi mới của Thâm Quyến"],
+[1,"","DJI Flagship","Công nghệ và thiết bị bay"],
+[1,"","Phố đi bộ Đông Môn","Mua sắm và ẩm thực"],
+[1,"","Buổi tối ở Thâm Quyến","Drone giao hàng, taxi không người lái"],
+[2,"","INNO100","Cửa hàng công nghệ"],
+[2,"","Công viên Tài Năng","Dạo bộ và chụp hình"],
+[2,"","Di chuyển sang Quảng Châu","Ăn trưa tại Quảng Châu"],
+[2,"","Chimelong Safari","Cáp treo và tàu hỏa nhỏ"],
+[3,"","Công viên Việt Tú","Cảnh quan và văn hoá"],
+[3,"","Bảo tàng Quảng Châu","Lịch sử thành phố"],
+[3,"","Tháp Quảng Châu","Biểu tượng của thành phố"],
+[3,"","Đại Phật Tự","Quần thể Phật giáo giữa phố"],
+[3,"","Phố đi bộ Bắc Kinh","Mua sắm và ẩm thực"],
+[4,"","Vĩnh Khánh Phường","Phố cổ giữa đô thị hiện đại"],
+[4,"20:05","Ra sân bay, chuyến CZ367","Bay về TP.HCM"],
+[4,"22:10","Về đến Tân Sơn Nhất","Kết thúc hành trình"]
+];
+var L=STOPS.length-1,cur=-1,posts=[],db=null,assets=null,me=null,mine=null,live=false,touched=false;
+var $=function(i){return document.getElementById(i)};
+function h(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function fmt(ts){try{return new Date(ts).toLocaleString("vi-VN",{timeZone:"Asia/Ho_Chi_Minh",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})+" (giờ VN)"}catch(e){return""}}
+
+function status(){
+  var s=$("st"),done=cur<0?0:(cur>=L?STOPS.length:cur);
+  $("bar").style.width=(done/STOPS.length*100)+"%";
+  $("live").className="live"+(live?" on":"");
+  s.textContent="";
+  if(!live&&!db){s.textContent="Chế độ xem tĩnh. Mở bằng tài khoản được mời để xem cập nhật trực tiếp.";return}
+  if(cur<0)s.textContent="Đoàn chưa khởi hành. Cập nhật trực tiếp sẽ hiện ở đây.";
+  else if(cur>=L)s.textContent="Đoàn đã về đến Tân Sơn Nhất an toàn. Cảm ơn mọi người đã theo dõi!";
+  else{s.append("Đoàn đang ở: ");s.append(h("b","",STOPS[cur][2]))}
+}
+
+function render(){
+  var tl=$("tl");tl.textContent="";
+  DAYS.forEach(function(d,di){
+    var hd=h("h2");hd.append(h("span","",d[0]));hd.append(" · "+d[2]);hd.append(h("em","",d[1]));tl.append(hd);
+    STOPS.forEach(function(s,i){
+      if(s[0]!==di)return;
+      var st=h("div","stop"+(cur>=0&&(i<cur||cur>=L)?" done":"")+(i===cur&&cur<L?" cur":""));
+      if(s[1])st.append(h("div","t",s[1]));
+      var n=h("div","n",s[2]);if(i===cur&&cur<L)n.append(h("span","badge","Đang ở đây"));
+      st.append(n);st.append(h("div","s",s[3]));
+      if(assets&&db&&i!==cur){var b=h("button","btn sm no-print","Đặt là điểm hiện tại");b.onclick=function(){setCur(i)};st.append(b)}
+      posts.filter(function(p){return p.stop===i}).forEach(function(p){st.append(card(p))});
+      tl.append(st);
+    });
+  });
+  status();
+}
+
+function card(p){
+  var c=h("div","post");
+  if(p.imgs&&p.imgs.length){var g=h("div","imgs");p.imgs.forEach(function(id){var im=h("img","th");im.loading="lazy";im.alt="Ảnh chuyến đi";im.src="/_blob/"+id;im.tabIndex=0;im.onclick=function(){zoom(im.src)};im.onkeydown=function(e){if(e.key==="Enter")zoom(im.src)};g.append(im)});c.append(g)}
+  if(p.text)c.append(h("p","",p.text));
+  c.append(h("div","m",(p.name||"Thành viên đoàn")+" · "+fmt(p.ts)));
+  if(db&&mine&&p.by===mine){var d=h("button","btn sm no-print","Xoá");d.onclick=function(){if(d.dataset.k){db.doc("posts/"+p.id).delete().catch(function(){})}else{d.dataset.k=1;d.textContent="Bấm lần nữa để xoá"}};c.append(d)}
+  return c;
+}
+function zoom(src){var l=$("lb");l.firstChild.src=src;l.classList.add("on")}
+$("lb").onclick=function(){this.classList.remove("on")};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")$("lb").classList.remove("on")});
+$("pr").onclick=function(){try{window.print()}catch(e){}};
+
+function setCur(i){db.doc("trip/status").set({cur:i,ts:Date.now()}).catch(function(){$("msg").textContent="Không cập nhật được."})}
+
+function shrink(f){return new Promise(function(res,rej){var im=new Image(),u=URL.createObjectURL(f);im.onload=function(){var k=Math.min(1,1600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);c.toBlob(function(b){URL.revokeObjectURL(u);b?res(b):rej(new Error("blob"))},"image/jpeg",.82)};im.onerror=function(){rej(new Error("img"))};im.src=u})}
+
+async function submit(){
+  var fs=Array.prototype.slice.call($("fl").files),tx=$("tx").value.trim(),nm=$("nm").value.trim(),msg=$("msg"),go=$("go");
+  if(!fs.length&&!tx){msg.textContent="Hãy thêm ảnh hoặc vài dòng ghi chú.";return}
+  go.disabled=true;msg.textContent="Đang đăng...";
+  try{
+    var ids=[];
+    for(var i=0;i<fs.length;i++){msg.textContent="Đang tải ảnh "+(i+1)+"/"+fs.length+"...";var r=await assets.upload(await shrink(fs[i]));ids.push(r.id)}
+    var id="p"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    await db.collection("posts").doc(id).set({stop:+$("sel").value,text:tx,name:nm,imgs:ids,ts:Date.now(),by:mine||""});
+    try{localStorage.setItem("trip-name",nm)}catch(e){}
+    $("tx").value="";$("fl").value="";msg.textContent="Đã đăng.";
+  }catch(e){msg.textContent="Chưa đăng được: "+((e&&e.code)||"thử lại sau")}
+  go.disabled=false;
+}
+
+async function init(){
+  render();
+  var sel=$("sel");
+  STOPS.forEach(function(s,i){var o=document.createElement("option");o.value=i;o.textContent=DAYS[s[0]][0]+" · "+s[2];sel.append(o)});
+  sel.onchange=function(){touched=true};
+  try{$("nm").value=localStorage.getItem("trip-name")||""}catch(e){}
+  var c=window.claude;if(!c||!c.use){$("ro").hidden=false;return}
+  try{db=await c.use("db")}catch(e){}
+  try{assets=await c.use("assets")}catch(e){}
+  try{var u=await c.use("user");if(u&&u.id)mine=await u.id()}catch(e){}
+  if(!db){$("ro").hidden=false;render();return}
+  if(assets){$("comp").hidden=false;$("go").onclick=submit}else $("ro").hidden=false;
+  db.doc("trip/status").onSnapshot(function(s){live=true;cur=s.exists&&typeof s.data().cur==="number"?s.data().cur:-1;if(!touched&&cur>=0&&cur<=L)sel.value=cur;render()},function(){live=false;status()});
+  db.collection("posts").orderBy("ts","desc").onSnapshot(function(q){live=true;posts=q.docs.map(function(d){var x=d.data();x.id=d.id;return x});render()},function(){live=false;status()});
+  render();
+}
+init();
+</script>
+</body>
+</html>
